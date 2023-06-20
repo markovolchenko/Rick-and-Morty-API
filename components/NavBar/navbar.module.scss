@@ -1,0 +1,31 @@
+.wrap {
+  background-color: #000000;
+}
+
+.list {
+  display: flex;
+  padding: 2rem;
+  gap: 5rem;
+}
+
+.item {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 3.3rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #7cfc00;
+  transition: .4s;
+}
+
+.text {
+  transition: .4s;
+
+  &:hover {
+    text-shadow: 0 8px 26px #adff2f, 0 28px 30px rgba(0, 0, 0, 0.3);
+    color: #adff2f;
+  }
+}
