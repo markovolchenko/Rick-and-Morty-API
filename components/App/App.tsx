@@ -4,6 +4,7 @@ import NavBar from "../NavBar/NavBar";
 import Home from "../Home/Home";
 import Characters from "../Characters/Characters";
 import Locations from "../Locations/Locations";
+import Character from "../Character/Character";
 
 
 const App = () => {
@@ -27,7 +28,6 @@ const App = () => {
         fetchCharacter();
         fetchLocation();
 
-
     }, [])
 
     return (
@@ -43,6 +43,12 @@ const App = () => {
                     </Route>
                     <Route exact path='/locations'>
                         <Locations data={location}/>
+                    </Route>
+                    <Route path="/characters/:userId">
+                        <Character/>
+                    </Route>
+                    <Route path="/characters/:userId/info/:locationId/?showAdditionalInfo=false">
+                        <Character/>
                     </Route>
                 </Switch>
             </Router>

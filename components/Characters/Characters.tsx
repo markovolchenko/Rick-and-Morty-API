@@ -1,4 +1,5 @@
 import style from './characters.module.scss'
+import {Link} from "react-router-dom";
 
 function Characters({data}) {
     return (
@@ -7,7 +8,7 @@ function Characters({data}) {
                 <div className={style.container}>
                     {data.map((character, i) => {
                         return (
-                            <div key={i}>
+                            <Link to={`/characters/${character.id}`} key={i}>
                                 <div className={style.box}>
                                     <img src={character.image} alt="image"/>
                                     <div className={style.description}>
@@ -29,10 +30,9 @@ function Characters({data}) {
                                                     <p>{character.gender}</p></div>
                                             </li>
                                         </ul>
-
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         )
                     })
                     }
