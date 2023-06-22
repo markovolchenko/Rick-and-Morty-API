@@ -8,7 +8,7 @@
 
 .box {
   position: relative;
-  border: .2rem solid #adff2f;
+  border: .3rem solid #adff2f;
   border-radius: 2rem;
   overflow: hidden;
   cursor: pointer;
@@ -18,6 +18,36 @@
     transform: translateY(-1rem);
     box-shadow: 0 8px 26px #adff2f, 0 28px 30px rgba(0, 0, 0, 0.3);
   }
+
+  &_dead {
+    position: relative;
+    border: .3rem solid red;
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      transform: translateY(-1rem);
+      box-shadow: 0 8px 26px red, 0 28px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &_unknown {
+    position: relative;
+    border: .3rem solid deepskyblue;
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      transform: translateY(-1rem);
+      box-shadow: 0 8px 26px deepskyblue, 0 28px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+
 }
 
 .description {
@@ -40,6 +70,38 @@
   0 1px 1px #adff2f,
   -1px 0 1px #adff2f,
   0 -1px 1px #adff2f;
+
+  &_dead {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.6rem;
+    line-height: 3.3rem;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: red;
+    text-shadow: 1px 0 1px red,
+    0 1px 1px red,
+    -1px 0 1px red,
+    0 -1px 1px red;
+  }
+
+  &_unknown {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.6rem;
+    line-height: 3.3rem;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: deepskyblue;
+    text-shadow: 1px 0 1px deepskyblue,
+    0 1px 1px deepskyblue,
+    -1px 0 1px deepskyblue,
+    0 -1px 1px deepskyblue;
+  }
 }
 
 .text_box {

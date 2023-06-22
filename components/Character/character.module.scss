@@ -1,52 +1,75 @@
-
-.box {
-  position: relative;
-  border: .2rem solid #adff2f;
-  border-radius: 2rem;
-  overflow: hidden;
-  cursor: pointer;
-  transition: .3s;
-
-  &:hover {
-    transform: translateY(-1rem);
-    box-shadow: 0 8px 26px #adff2f, 0 28px 30px rgba(0, 0, 0, 0.3);
-  }
+.container {
+  margin: 10rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
 }
 
-.description {
-  padding: 1rem;
-  top: 0;
+.image {
+  border: .2rem solid #adff2f;
+  border-radius: 1rem;
+  width: 50rem;
 }
 
 .name {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2.6rem;
-  line-height: 3.3rem;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #222222;
-  text-shadow: 1px 0 1px #adff2f,
-  0 1px 1px #adff2f,
-  -1px 0 1px #adff2f,
-  0 -1px 1px #adff2f;
-}
-
-.text_box {
   display: flex;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 4rem;
   line-height: 3.3rem;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #222222;
+  color: #adff2f;
   text-shadow: 1px 0 1px #adff2f,
   0 1px 1px #adff2f,
   -1px 0 1px #adff2f,
   0 -1px 1px #adff2f;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.item {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.3rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #adff2f;
+  text-shadow: 1px 0 1px #adff2f,
+  0 1px 1px #adff2f,
+  -1px 0 1px #adff2f,
+  0 -1px 1px #adff2f;
+}
+
+.item_data {
+  padding-left: 1rem;
+
+  &__red {
+    padding-left: 1rem;
+    color: red;
+    text-shadow: 1px 0 1px firebrick,
+    0 1px 1px firebrick,
+    -1px 0 1px firebrick,
+    0 -1px 1px firebrick;
+  }
+
+  &__blue {
+    padding-left: 1rem;
+    color: deepskyblue;
+    text-shadow: 1px 0 1px cornflowerblue,
+    0 1px 1px cornflowerblue,
+    -1px 0 1px cornflowerblue,
+    0 -1px 1px cornflowerblue;
+  }
 }

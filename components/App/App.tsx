@@ -5,7 +5,7 @@ import Home from "../Home/Home";
 import Characters from "../Characters/Characters";
 import Locations from "../Locations/Locations";
 import Character from "../Character/Character";
-
+import Location from "../Location/Location";
 
 const App = () => {
     const [character, setCharacter] = useState([])
@@ -14,7 +14,7 @@ const App = () => {
     useEffect(() => {
 
         async function fetchCharacter() {
-            const res = await fetch('https://rickandmortyapi.com/api/character');
+            const res = await fetch('https://rickandmortyapi.com/api/character/');
             const data = await res.json()
             setCharacter(data.results)
         }
@@ -42,13 +42,13 @@ const App = () => {
                         <Characters data={character}/>
                     </Route>
                     <Route exact path='/locations'>
-                        <Locations data={location}/>
+                        <Locations locdata={location}/>
                     </Route>
-                    <Route path="/characters/:userId">
+                    <Route exact path="/characters/:charId">
                         <Character/>
                     </Route>
-                    <Route path="/characters/:userId/info/:locationId/?showAdditionalInfo=false">
-                        <Character/>
+                    <Route exact path="/locations/:locId">
+                        <Location/>
                     </Route>
                 </Switch>
             </Router>
